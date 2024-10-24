@@ -51,26 +51,41 @@ document.getElementById('agregar-barrio').onclick = function() {
 
 document.getElementById('eliminar-barrio').onclick = function() {
     const barrioEliminar = document.getElementById('barrio-eliminar').value;
+
+    // Validar si el input está vacío
+    if (!barrioEliminar) {
+        alert("Error: Debes ingresar un nombre de barrio.");
+        return;
+    }
+
+    // Validar si el nombre del barrio contiene números
     if (/\d/.test(barrioEliminar)) {
         alert("Error: El nombre del barrio no puede contener números.");
         return;
     }
+
     // Verificar si se puede eliminar un barrio
     if (barriosEliminados >= 2) {
         alert("Error: Solo se permiten eliminar 2 barrios.");
         return;
     }   
-    if (graph[barrioEliminar]) {
-        delete graph[barrioEliminar];
-        for (const barrio in graph) {
-            delete graph[barrio][barrioEliminar];
-        }
-        barriosEliminados++; // Incrementar el contador de barrios eliminados
-        document.getElementById('barrio-eliminar').value = '';
-        mostrarBarrios();
+
+    // Verificar si el barrio existe en el grafo
+    if (!graph[barrioEliminar]) {
+        alert("Error: El barrio no existe en el grafo.");
+        return;
     }
-    
+
+    // Si todas las validaciones pasan, proceder a eliminar el barrio
+    delete graph[barrioEliminar];
+    for (const barrio in graph) {
+        delete graph[barrio][barrioEliminar];
+    }
+    barriosEliminados++; // Incrementar el contador de barrios eliminados
+    document.getElementById('barrio-eliminar').value = '';
+    mostrarBarrios();
 };
+
 mostrarBarrios();
 
 document.getElementById('calcular-distancias').onclick = function() {

@@ -1,33 +1,33 @@
 body {
-    font-family: 'Monserrat', sans-serif; /* Aplicar la fuente Open Sans a todo el cuerpo */
+    font-family: 'Monserrat', sans-serif; 
     font-weight: bold; 
-    background-color: #f9f9f9; /* Color de fondo suave para la página */
-    color: #333; /* Color del texto */
+    background-color: #f9f9f9; 
+    color: #333; 
     margin: 0;
     padding: 0;
     text-align: center; 
 }
 .contenedor {
-    display: flex; /* Usar Flexbox para alinear columnas */
-    justify-content: space-between; /* Espacio entre columnas */
-    margin: 20px; /* Margen alrededor del contenedor */
+    display: flex; 
+    justify-content: space-between; 
+    margin: 20px;
 }
 
 .columna {
-    flex: 1; /* Cada columna ocupa el mismo espacio */
-    margin: 0 10px; /* Espaciado entre columnas */
+    flex: 1; 
+    margin: 0 10px; 
 }
 
 .opciones {
-    max-width: 200px; /* Limitar el ancho de la columna de opciones */
+    max-width: 500px; 
 }
 
 .barrios {
-    max-width: 300px; /* Limitar el ancho de la columna de barrios */
+    max-width: 150px; 
 }
 
 .resultados {
-    max-width: 300px; /* Limitar el ancho de la columna de resultados */
+    max-width: 300px; 
 }
 
 .centrar {
@@ -38,11 +38,11 @@ body {
 .titulo {
     font-size: 2em; 
     margin: 20px 0; 
-    color: #343a40; /* Color de texto más oscuro */
+    color: #343a40; 
 }
 
 h3 {
-    text-align: left; 
+    text-align: center; 
 }
 
 input {
@@ -54,15 +54,15 @@ input {
 button {
     padding: 10px;
     width: 100%;
-    background-color: #007bff; /* Azul suave para los botones */
+    background-color: #007bff; 
     color: white; 
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px; 
 }
 
 button:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    background-color: #0056b3;
 }
 
 #resultados {
@@ -73,7 +73,7 @@ button:hover {
     margin: 20px auto; 
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff; 
     text-align: left; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
@@ -85,9 +85,9 @@ button:hover {
 }
 
 #barrios-list th, #barrios-list td {
-    border: 1px solid #007bff; /* Bordes azules */
+    border: 1px solid #ffffff; /* Bordes azules */
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 #barrios-list th {
