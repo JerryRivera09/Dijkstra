@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Distancias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="titulo">Algoritmo de Dijkstra</h1>
+
+    <div class="contenedor">
+        <div class="columna opciones">
+            <input type="text" id="nuevo-barrio" placeholder="Agregar nuevo barrio">
+            <button id="agregar-barrio">Agregar Barrio</button>
+            
+            <input type="text" id="barrio-eliminar" placeholder="Eliminar barrio">
+            <button id="eliminar-barrio">Eliminar Barrio</button>
+            
+            <input type="text" id="barrio-distancia" placeholder="Ingrese un barrio">
+            <button id="calcular-distancias">Calcular Distancias</button>
+        </div>
+
+        <div class="columna barrios">
+            <h3>Barrios Disponibles:</h3>
+            <div id="barrios-list"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Barrio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los barrios se añadirán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="columna resultados">
+            <h3>Resultados:</h3>
+            <div id="resultados"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+    
+</body>
+</html>
