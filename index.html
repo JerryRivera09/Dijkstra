@@ -6,6 +6,8 @@
     <title>Calculador de Distancias</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <h1 class="titulo">Algoritmo de Dijkstra</h1>
@@ -21,7 +23,7 @@
             <input type="text" id="barrio-distancia" placeholder="Ingrese un barrio">
             <button id="calcular-distancias">Calcular Distancias</button>
         </div>
-
+    
         <div class="columna barrios">
             <h3>Barrios Disponibles:</h3>
             <div id="barrios-list"> 
@@ -37,14 +39,21 @@
                 </table>
             </div>
         </div>
-
+    
         <div class="columna resultados">
             <h3>Resultados:</h3>
             <div id="resultados"></div>
         </div>
+    
+        <div class="columna mapa">
+            <h3>Mapa de Barrios:</h3>
+            <div id="map" style="height: 400px;"></div> <!-- Contenedor para el mapa -->
+        </div>
     </div>
-    <script src="script.js"></script>
+    
 
-   
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
